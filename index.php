@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        test
-        ?>
-    </body>
-</html>
+<?php
+
+include 'Timer.php';
+
+
+$start = new Timer();
+$begin = $start->start();
+$periodOfTime = -2;
+sleep($periodOfTime);
+try {
+    if ($periodOfTime <= 0) {
+        throw new Exception();
+    }
+    $end = $start->stop($begin);
+    echo $end;
+} catch (Exception $ex) {
+     echo "Be more focused";
+}
+
+
+
+
