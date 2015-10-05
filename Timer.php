@@ -9,13 +9,12 @@ class Timer {
     protected $stopTime;
 
     public function start() {
-        $start = $this->startTime = microtime(true);
-        return intval($start);
+        return $this->startTime = microtime(true);
     }
 
     public function stop($start) {
         $stop = $this->stopTime = microtime(true);
-        $delta = (intval($stop)) - $start;
+        $delta = $stop - $start;
         return $delta;
     }
 

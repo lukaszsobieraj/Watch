@@ -5,7 +5,7 @@ include 'Timer.php';
 
 $start = new Timer();
 $begin = $start->start();
-$periodOfTime = -2;
+$periodOfTime = 2;
 sleep($periodOfTime);
 try {
     if ($periodOfTime <= 0) {
