@@ -13,9 +13,13 @@ class Timer {
     }
 
     public function stop($start) {
-        $stop = $this->stopTime = microtime(true);
-        $delta = $stop - $start;
+        $this->stopTime = microtime(true);
+        $delta = $this->stopTime - $start;
         return $delta;
+        
     }
+    
+    
+    
 
 }

@@ -1,22 +1,13 @@
 <?php
 
 include 'Timer.php';
+include 'Functions.php';
 
 
-$start = new Timer();
-$begin = $start->start();
-$periodOfTime = 2;
-sleep($periodOfTime);
-try {
-    if ($periodOfTime <= 0) {
-        throw new Exception();
-    }
-    $end = $start->stop($begin);
-    echo $end;
-} catch (Exception $ex) {
-     echo "Be more focused";
-}
-
-
-
+$begin = new Timer();
+$start = $begin->start();;
+//functionBlock
+$functions = new Functions();
+echo 'The used function worked for: '.$begin->stop($start).' s';
+//endblock
 
