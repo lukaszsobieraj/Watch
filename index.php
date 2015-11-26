@@ -10,4 +10,4 @@ $start = $begin->start();;
 $functions = new Functions();
 echo 'The used function worked for: '.$begin->stop($start).' s';
 //endblock
-
+echo 'test';
